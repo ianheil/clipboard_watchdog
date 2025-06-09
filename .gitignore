@@ -1,4 +1,4 @@
 clipboard_watchdog_*.zip
-screenshots/
+#screenshots/
 test/
 .DS_Store 
