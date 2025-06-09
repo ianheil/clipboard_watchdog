@@ -14,4 +14,4 @@ Clipboard Watchdog is designed with your privacy in mind. This extension does **
 - **Nothing.** Clipboard Watchdog does not send any data to any server or third party.
 
 ## Contact
-For questions or concerns, please [open an issue](https://github.com/yourusername/clipboard_watchdog/issues).
+For questions or concerns, please [open an issue](https://github.com/ianheil/clipboard_watchdog/issues).
