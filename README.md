@@ -13,15 +13,15 @@ Clipboard Watchdog is a Chrome extension that monitors and alerts you when websi
 - **Settings:** Customize popup alerts, badge counter, log auto-clear, export format, and blocking behavior.
 - **Privacy-first:** All logs and settings stay on your device. No clipboard data is ever sent anywhere.
 
-## Installation
-- **From Chrome Web Store:**
-  1. Visit the [Chrome Web Store page](https://chrome.google.com/webstore/detail/clipboard-watchdog/your-extension-id).
-  2. Click "Add to Chrome".
-- **From source (for developers):**
-  1. Clone this repo.
-  2. Go to `chrome://extensions` in Chrome.
-  3. Enable "Developer mode".
-  4. Click "Load unpacked" and select the project folder (excluding test HTML files).
+## Promo Images
+
+**Small Promo Tile (440x280):**
+
+![Small Promo Tile](screenshots/small_promo_tile.png)
+
+**Marquee Promo Tile (1400x560):**
+
+![Marquee Promo Tile](screenshots/CWD_promo-marquee.png)
 
 ## Screenshots
 1. **Popup UI (main view)**  
