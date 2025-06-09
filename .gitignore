@@ -1,0 +1,4 @@
+clipboard_watchdog_*.zip
+screenshots/
+test/
+.DS_Store 

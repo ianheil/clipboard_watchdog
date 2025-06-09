@@ -1,0 +1,34 @@
+<!--
+  Clipboard Watchdog Test Page
+  Use this page to test all detection features of the extension, including clipboard read/write, legacy APIs, exfiltration, and iframe scenarios.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clipboard Watchdog Test</title>
+</head>
+<body>
+  <h2>Clipboard Watchdog Test Page</h2>
+  <input id="testInput" value="Test value for copy/cut">
+  <button onclick="navigator.clipboard.writeText('async write!')">Async Write Clipboard</button>
+  <button onclick="navigator.clipboard.readText().then(t=>alert('Read: ' + t))">Async Read Clipboard</button>
+  <button onclick="document.execCommand('copy')">Legacy Copy (execCommand)</button>
+  <button onclick="document.execCommand('cut')">Legacy Cut (execCommand)</button>
+  <button onclick="document.execCommand('paste')">Legacy Paste (execCommand)</button>
+  <button onclick="setTimeout(() => navigator.clipboard.writeText('delayed write!'), 2000)">Async Write (Delayed, No Gesture)</button>
+  <button onclick="setTimeout(() => document.execCommand('copy'), 2000)">Legacy Copy (Delayed, No Gesture)</button>
+  <button onclick="navigator.clipboard.writeText('loop!'); setTimeout(() => navigator.clipboard.writeText('loop!'), 1000); setTimeout(() => navigator.clipboard.writeText('loop!'), 2000); setTimeout(() => navigator.clipboard.writeText('loop!'), 3000);">Trigger Overwrite Loop</button>
+  <button onclick="navigator.clipboard.readText().then(() => fetch('https://httpbin.org/get'))">Read then Fetch (Exfiltration Test)</button>
+  <hr>
+  <iframe src="clip-iframe.html" width="400" height="100" title="Test Iframe"></iframe>
+  <p>To test background access: Open this page in two tabs, trigger a clipboard action in one, then switch to the other tab before the action fires (e.g., use the delayed buttons).</p>
+  <script>
+    // For legacy copy/cut to work, select the input
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('testInput').select();
+      });
+    });
+  </script>
+</body>
+</html> 

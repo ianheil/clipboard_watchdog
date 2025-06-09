@@ -1,0 +1,16 @@
+/*
+  Popup CSS for Clipboard Watchdog
+  Styles the popup UI for clarity and accessibility.
+*/
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #0f0f0f;
+  color: #00ff99;
+  padding: 10px;
+  width: 320px;
+}
+ul { list-style-type: none; padding: 0; }
+li { margin-bottom: 8px; }
+input { width: 80%; margin-right: 5px; background-color: #222; color: #00ff99; border: 1px solid #444; }
+button { background-color: #111; color: #00ff99; border: 1px solid #00ff99; padding: 5px; cursor: pointer; }
+hr { border: 1px solid #222; } 

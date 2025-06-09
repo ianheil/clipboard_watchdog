@@ -1,0 +1,12 @@
+<!--
+  Iframe Clipboard Test for Clipboard Watchdog
+  Use this iframe to test detection of clipboard actions inside embedded frames.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h4>Iframe Clipboard Test</h4>
+  <button onclick="navigator.clipboard.writeText('iframe write!')">Iframe Async Write</button>
+  <button onclick="document.execCommand('copy')">Iframe Legacy Copy</button>
+</body>
+</html> 
