@@ -24,8 +24,20 @@ Clipboard Watchdog is a Chrome extension that monitors and alerts you when websi
   4. Click "Load unpacked" and select the project folder (excluding test HTML files).
 
 ## Screenshots
-![Popup UI](screenshots/popup.png)
-![Settings Modal](screenshots/settings.png)
+1. **Popup UI (main view)**  
+   ![Popup UI](screenshots/1_popupUI.png)
+2. **Settings modal**  
+   ![Settings Modal](screenshots/2_popupUI_settings.png)
+3. **Alert: Write detected, badge shown**  
+   ![Alert Write with Badge](screenshots/3_alert_write_with_badge.png)
+4. **Popup UI with new alert example**  
+   ![Popup UI New Alert Example](screenshots/4_popupUI_newalert_example.png)
+5. **Alert: Detected via legacy clipboard API**  
+   ![Alert Detected via Legacy Clipboard API](screenshots/5_alert_detected-via-legacy-clipboard-API.png)
+6. **Alert: No recent user gesture detected**  
+   ![Alert No Recent User Gesture](screenshots/6_alert_no-recent-user-gesture.png)
+7. **Alert: Exfiltration detected**  
+   ![Alert Exfiltration](screenshots/7_alert_exfiltration.png)
 
 ## Privacy Policy
 Clipboard Watchdog does **not** collect, store, or transmit your clipboard data or browsing activity. All logs and settings stay on your device. See [PRIVACY.md](./PRIVACY.md) for details.
