@@ -4,7 +4,7 @@ Clipboard Watchdog is a Chrome extension that monitors and alerts you when websi
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/lkigpidloeacbmmocpnppnjimlmfedif?label=Chrome%20Web%20Store&color=4285f4)](https://chromewebstore.google.com/detail/clipboard-watchdog/lkigpidloeacbmmocpnppnjimlmfedif)
 
-## 🚀 Install
+## 🐕 Install
 
 **[Install from Chrome Web Store](https://chromewebstore.google.com/detail/clipboard-watchdog/lkigpidloeacbmmocpnppnjimlmfedif)**
 
