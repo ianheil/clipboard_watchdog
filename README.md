@@ -2,6 +2,12 @@
 
 Clipboard Watchdog is a Chrome extension that monitors and alerts you when websites access or modify your clipboard. It helps protect your privacy by detecting suspicious clipboard activity, logging attempts, and providing user controls.
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/lkigpidloeacbmmocpnppnjimlmfedif?label=Chrome%20Web%20Store&color=4285f4)](https://chromewebstore.google.com/detail/clipboard-watchdog/lkigpidloeacbmmocpnppnjimlmfedif)
+
+## 🚀 Install
+
+**[Install from Chrome Web Store](https://chromewebstore.google.com/detail/clipboard-watchdog/lkigpidloeacbmmocpnppnjimlmfedif)**
+
 ## Features
 - **Alerts** when a site tries to read, write, copy, cut, or paste your clipboard using JavaScript.
 - **Logs** each attempt with site, action, result, and detection tags (background, no-gesture, overwrite-loop, exfiltration, etc.).
@@ -43,6 +49,7 @@ Clipboard Watchdog is a Chrome extension that monitors and alerts you when websi
 Clipboard Watchdog does **not** collect, store, or transmit your clipboard data or browsing activity. All logs and settings stay on your device. See [PRIVACY.md](./PRIVACY.md) for details.
 
 ## Support & Feedback
+- [Install from Chrome Web Store](https://chromewebstore.google.com/detail/clipboard-watchdog/lkigpidloeacbmmocpnppnjimlmfedif)
 - [Open an issue](https://github.com/ianheil/clipboard_watchdog/issues) on GitHub
 
 ## License
