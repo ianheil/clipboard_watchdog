@@ -14,6 +14,7 @@ Clipboard Watchdog is a Chrome extension that monitors and alerts you when websi
 - **Exfiltration detection:** Flags when a clipboard read is quickly followed by a network request (fetch/XHR), which may indicate clipboard data exfiltration. **Note:** This does not guarantee clipboard data was sent—only that a suspicious pattern occurred.
 - **Badge & Icon:** Shows a badge counter and flashes an alert icon for new or suspicious activity.
 - **Allowlist:** Silence alerts/logs for trusted domains.
+- **Disable extension:** Toggle to completely disable the extension if sites break due to script injection.
 - **Export:** Download your logs as CSV or JSON.
 - **Block all clipboard access:** Aggressively blocks all JavaScript clipboard access (toggle in settings).
 - **Settings:** Customize popup alerts, badge counter, log auto-clear, export format, and blocking behavior.
