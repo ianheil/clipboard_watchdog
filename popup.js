@@ -95,6 +95,7 @@ function updateSettingsUI(settings) {
   document.getElementById('toggleBadgeCounter').checked = settings.badgeCounter !== false;
   document.getElementById('toggleExportJson').checked = settings.exportJson === true;
   document.getElementById('toggleBlockClipboard').checked = settings.blockClipboard === true;
+  document.getElementById('toggleExtensionDisabled').checked = settings.extensionDisabled === true;
   document.getElementById('exportLogs').textContent = 'Export Logs';
 }
 // Save settings when toggles are changed
@@ -104,7 +105,8 @@ function saveSettings() {
   const badgeCounter = document.getElementById('toggleBadgeCounter').checked;
   const exportJson = document.getElementById('toggleExportJson').checked;
   const blockClipboard = document.getElementById('toggleBlockClipboard').checked;
-  chrome.storage.local.set({ popupAlerts, autoClearLogs, badgeCounter, exportJson, blockClipboard }, () => {
+  const extensionDisabled = document.getElementById('toggleExtensionDisabled').checked;
+  chrome.storage.local.set({ popupAlerts, autoClearLogs, badgeCounter, exportJson, blockClipboard, extensionDisabled }, () => {
     chrome.runtime.sendMessage({ type: 'updateBadgeSetting' });
     document.getElementById('exportLogs').textContent = 'Export Logs';
   });
@@ -114,9 +116,10 @@ document.getElementById('toggleAutoClear').onchange = saveSettings;
 document.getElementById('toggleBadgeCounter').onchange = saveSettings;
 document.getElementById('toggleExportJson').onchange = saveSettings;
 document.getElementById('toggleBlockClipboard').onchange = saveSettings;
+document.getElementById('toggleExtensionDisabled').onchange = saveSettings;
 
 // Load settings on popup open
-chrome.storage.local.get({ popupAlerts: true, autoClearLogs: true, badgeCounter: true, blockClipboard: false, exportJson: false }, (settings) => {
+chrome.storage.local.get({ popupAlerts: true, autoClearLogs: true, badgeCounter: true, blockClipboard: false, exportJson: false, extensionDisabled: false }, (settings) => {
   // Defensive: if blockClipboard is undefined, set it to false
   if (typeof settings.blockClipboard === 'undefined') {
     chrome.storage.local.set({ blockClipboard: false });

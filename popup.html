@@ -33,6 +33,49 @@
       width: 18px;
       height: 18px;
     }
+    /* Custom neon green checkbox styling */
+    .neon-checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #00ff99;
+      border-radius: 4px;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    .neon-checkbox:checked {
+      background: #00ff99;
+      box-shadow: 0 0 10px #00ff99;
+    }
+    .neon-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 6px;
+      height: 10px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .neon-checkbox:hover {
+      box-shadow: 0 0 8px #00ff99;
+    }
+    /* Cool neon glow for all buttons */
+    button {
+      background-color: #111;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      padding: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      box-shadow: 0 0 8px #00ff99;
+      background-color: #1a1a1a;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +96,11 @@
   <button id="addDomain">Add</button>
   <ul id="allowlist"></ul>
   <hr>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0">
+    <span>Disable extension (if sites break):</span>
+    <input type="checkbox" id="toggleExtensionDisabled" class="neon-checkbox">
+  </div>
+  <hr>
   <button id="exportLogs">Export Logs</button>
   <button id="clearLogs">Clear Logs</button>
 
@@ -70,6 +118,7 @@
         <li><b>Logs</b> each attempt with site, action, result, and detection tags (e.g. background, no-gesture, overwrite-loop, exfiltration).</li>
         <li><b>Badge & Icon:</b> Shows a badge counter and flashes an alert icon for new or suspicious activity.</li>
         <li><b>Allowlist:</b> Lets you allowlist trusted domains to silence alerts/logs for them.</li>
+        <li><b>Disable extension:</b> Toggle to completely disable the extension if sites break due to script injection.</li>
         <li><b>Export:</b> Download your logs as <b>CSV</b> or <b>JSON</b> for review or backup.</li>
         <li><b>Block all clipboard access:</b> (toggle in settings) Aggressively blocks all JavaScript clipboard access (read, write, copy, cut, paste) on all sites, and notifies you when blocking occurs.</li>
         <li><b>Settings:</b> Customize popup alerts, badge counter, log auto-clear, export format, and blocking behavior.</li>

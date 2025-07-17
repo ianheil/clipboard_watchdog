@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Clipboard Watchdog",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Alert when sites access or modify your clipboard.",
   "permissions": ["activeTab", "storage", "notifications"],
   "host_permissions": ["<all_urls>"],
